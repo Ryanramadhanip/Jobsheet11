@@ -22,5 +22,17 @@ public class ConvertVocal2Angka {
         String identitas = "Ryan Ramadhani Putra / X RPL 2 / 29";
         
         tampilJudul(identitas);
+        String kalimat = tampilInput();
+    }
+    
+    private static String tampilInput()
+    {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Masukkan Kalimat : ");
+        String kalimat = scanner.nextLine();
+        System.out.println("Kalimat Asli : " + kalimat);
+        
+        return kalimat;
     }
 }
