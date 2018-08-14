@@ -24,6 +24,8 @@ public class ConvertVocal2Angka {
         tampilJudul(identitas);
         String kalimat = tampilInput();
         String convert = vocal2Angka(kalimat);
+        
+        tampilPerKata(kalimat,convert);
     }
     
     private static String tampilInput()
@@ -47,5 +49,14 @@ public class ConvertVocal2Angka {
             kalimat = kalimat.replace(arConvert[i][0], arConvert[i][1]);
             
         return kalimat;
+    }
+    
+    private static void tampilPerKata(String kalimat, String convert)
+    {
+        String[] arrKal = kalimat.split(" ");
+        String[] arrCon = convert.split(" ");
+        
+        for (int i=0; i<arrKal.length; i++)
+            System.out.println(arrKal[i] + " => " + arrCon[i]);
     }
 }
